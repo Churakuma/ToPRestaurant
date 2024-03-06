@@ -1,1 +1,2 @@
-console.log("Test bundling");
+console.log("Test Bundling");
+import './style.css'
