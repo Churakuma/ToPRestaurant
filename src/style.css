@@ -16,7 +16,7 @@
     --fs-200: 0.875rem;
 
     /* Colors */
-    --bg-primary: rgb(186, 193, 214);
+    --bg-primary: rgb(207, 211, 223);
     --bg-secondary: rgb(179, 179, 179);
     --clr-primary: rgb(73, 77, 198);
     --clr-secondary: rgb(129, 132, 237);
@@ -94,6 +94,10 @@ body {
 
 /* Content */
 
+#content {
+    flex-direction: column;
+}
+
 #homepage__blurb {
     background-image: url('./assets/pexels-rachel-claire-4577179.jpg');
     background-repeat: no-repeat;
@@ -101,7 +105,7 @@ body {
     background-position: center;
     width: 100%;
     height: 480px;
-    max-width: 840px;
+    max-width: 1040px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -118,4 +122,41 @@ body {
     h1 {
         font-size: 64px;
     }
+}
+
+.restaurant__accents {
+    padding: 48px 0px 48px 0px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.homepage__card{
+    max-width: 328px;
+    width: 100%;
+
+    >.section__subtitle {
+        font-weight: bolder;
+        padding: 8px 0px 8px 0px;
+    }
+}
+
+.homepage__card__section__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: inherit;
+    height: 180px;
+    border-radius: 10px;
+}
+
+#bar__image__container {
+    background-image: url('./assets/pexels-nastyasensei-331107.jpg');
+}
+
+#dining__room__image__container {
+    background-image: url('./assets/pexels-pixabay-262047.jpg');
+}
+
+#terrace__image__container {
+    background-image: url('./assets/pexels-cassiano-psomas-1045199.jpg');
 }
