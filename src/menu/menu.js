@@ -1,18 +1,16 @@
 function menuContent() {
-    
+    const contentDiv = document.getElementById('content');
+
     // Setting menu page title
     const menuPageTitle = document.createElement('h1');
-    const contentDiv = document.getElementById('content')
-    contentDiv.appendChild(menuPageTitle);
-    var textNode = document.createTextNode('Menu');
+    menuPageTitle.textContent = 'Menu';
     menuPageTitle.setAttribute('id', 'menu__title');
-    menuPageTitle.appendChild(textNode);
+    contentDiv.appendChild(menuPageTitle);
 
     // Setting container for menu items
     const menuContainer = document.createElement('div');
+    menuContainer.classList.add('flex', 'menu__container');
     contentDiv.appendChild(menuContainer);
-    menuContainer.classList.add('flex');
-    menuContainer.classList.add('menu__container');
 
     // Set menu items
     [

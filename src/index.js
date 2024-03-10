@@ -3,6 +3,7 @@ import homepageContent from './homepage/homepage';
 import menuContent from './menu/menu';
 import contactContent from './contact/contact';
 
+
 const homeButton = document.getElementById('home__button');
 const menuButton = document.getElementById('menu__button');
 const contactButton = document.getElementById('contact__button');
@@ -33,7 +34,7 @@ function onMenuClick() {
     menuContent();
 }
 
-function onContact() {
+function onContactClick() {
     clearContent();
     contactContent();
 }
