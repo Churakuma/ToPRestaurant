@@ -208,3 +208,25 @@ button {
 #terrace__image__container {
     background-image: url('./assets/pexels-cassiano-psomas-1045199.jpg');
 }
+
+/* Menu Content */
+#menu__title {
+    font-size: 64px;
+    text-align: center;
+    padding: 0px 0px 32px 0px;
+}
+
+.menu__container {
+    flex-direction: column;
+    gap: 16px;
+
+    .item__name {
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .item__price {
+        float: right;
+        padding: 0px 0px 0px 32px;
+    }
+}

@@ -5,13 +5,14 @@ function menuContent() {
     const contentDiv = document.getElementById('content')
     contentDiv.appendChild(menuPageTitle);
     var textNode = document.createTextNode('Menu');
+    menuPageTitle.setAttribute('id', 'menu__title');
     menuPageTitle.appendChild(textNode);
 
     // Setting container for menu items
     const menuContainer = document.createElement('div');
     contentDiv.appendChild(menuContainer);
     menuContainer.classList.add('flex');
-    menuContainer.setAttribute('id', 'menu__container');
+    menuContainer.classList.add('menu__container');
 
     // Set menu items
     [
@@ -26,26 +27,21 @@ function menuContent() {
         menuContainer.appendChild(menuItemCard);
         menuItemCard.setAttribute('id', item.id);
 
-        const menuItemImage = document.createElement('div');
-        menuItemCard.appendChild(menuItemImage);
-        menuItemImage.classList.add('menu__item__image');
-        menuItemImage.setAttribute('id', item.id + '__image');
-
         const menuItemName = document.createElement('p');
         menuItemCard.appendChild(menuItemName);
         menuItemName.classList.add('item__name');
         menuItemName.textContent = item.name;
+        
+        const menuPrice = document.createElement('span');
+        menuItemCard.appendChild(menuPrice);
+        menuPrice.classList.add('item__price');
+        menuPrice.textContent = item.price;
 
         const menuItemIngredients = document.createElement('p');
         menuItemCard.appendChild(menuItemIngredients);
         menuItemIngredients.classList.add('ingredients');
         menuItemIngredients.textContent = item.ingredients;
-
-        const menuPrice = document.createElement('span');
-        menuItemCard.appendChild(menuPrice);
-        menuPrice.classList.add('item__price');
-        menuPrice.textContent = item.price;
-    });    
+    });
 }
 
 export default menuContent;
