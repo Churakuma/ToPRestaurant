@@ -13,14 +13,18 @@ function menuContent() {
     menuContainer.classList.add('flex');
     menuContainer.setAttribute('id', 'menu__container');
 
+    
+
     // Create menu items
     for(var i = 0; i < 5; i++) {
         const menuItem = document.createElement('div');
         menuItem.classList.add('menu__item');
         menuContainer.appendChild(menuItem);
+
+        const itemName = document.createElement('p');
+        menuItem.appendChild(itemName);
     }
     const menuItems = menuContainer.getElementsByTagName('div');
-    console.log(menuItems);
 
     // Set id's of each menu item
     menuItems[0].setAttribute('id', 'CoqAuVin');
@@ -28,7 +32,6 @@ function menuContent() {
     menuItems[2].setAttribute('id', 'Ratatouille');
     menuItems[3].setAttribute('id', 'Bouillabaisse');
     menuItems[4].setAttribute('id', 'Salade Nicoise');
-
     
 }
 
