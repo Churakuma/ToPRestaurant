@@ -1,6 +1,7 @@
 import './style.css'
 import homepageContent from './homepage/homepage';
 import menuContent from './menu/menu';
+import contactContent from './contact/contact';
 
 const homeButton = document.getElementById('home__button');
 const menuButton = document.getElementById('menu__button');
@@ -8,9 +9,10 @@ const contactButton = document.getElementById('contact__button');
 
 homeButton.addEventListener('click', onHomeClick);
 menuButton.addEventListener('click', onMenuClick);
+contactButton.addEventListener('click', onContactClick);
 
 // homepageContent();
-menuContent();
+contactContent();
 
 function clearContent() {
     const contentElement = document.getElementById('content');
@@ -29,4 +31,9 @@ function onHomeClick() {
 function onMenuClick() {
     clearContent();
     menuContent();
+}
+
+function onContact() {
+    clearContent();
+    contactContent();
 }
