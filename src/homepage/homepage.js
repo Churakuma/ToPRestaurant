@@ -1,6 +1,6 @@
-// Setting central homepage blurb
-
 function homepageContent() {
+
+    // Setting central homepage blurb
     const homepageBlurb = document.createElement("div");
     document.getElementById("content").appendChild(homepageBlurb);
     homepageBlurb.setAttribute('id', 'homepage__blurb');
