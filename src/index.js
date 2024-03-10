@@ -12,8 +12,7 @@ homeButton.addEventListener('click', onHomeClick);
 menuButton.addEventListener('click', onMenuClick);
 contactButton.addEventListener('click', onContactClick);
 
-// homepageContent();
-contactContent();
+homepageContent();
 
 function clearContent() {
     const contentElement = document.getElementById('content');
