@@ -35,20 +35,6 @@ function homepageContent() {
         // Set empty content tags inside homepage cards
         const homepageCardImageContainer = document.createElement('div');
         homepageCardImageContainer.classList.add('homepage__card__section__image');
-        
-        switch(i) {
-            case 0:
-                homepageCardImageContainer.setAttribute('id', 'bar__image__container');
-                break;
-            case 1:
-                homepageCardImageContainer.setAttribute('id','dining__room__image__container');
-                break;
-            case 2:
-                homepageCardImageContainer.setAttribute('id', 'terrace__image__container');
-                break;
-            default:
-                null;
-        }
 
         homepageFeatureCard.appendChild(homepageCardImageContainer);
         for(var x = 0; x < 2; x++) {
@@ -58,9 +44,54 @@ function homepageContent() {
             }
             homepageFeatureCard.appendChild(homepageCardTextElement);
         }
-        
+
+        switch(i) {
+            case 0:
+                homepageCardImageContainer.setAttribute('id', 'bar__image__container');
+                var paragraphs = homepageFeatureCard.getElementsByTagName("p");
+
+                if(paragraphs.length === 2) {
+                    var firstParagraph = paragraphs[0];
+                    firstParagraph.textContent += 'Le Bar';
+                    var secondParagraph = paragraphs[1];
+                    secondParagraph.textContent += `
+                    The bar serves a selection of classic and innovative cocktails,
+                    as well as a variety of spirits, wines and beers.
+                    `
+                }
+                break;
+            case 1:
+                homepageCardImageContainer.setAttribute('id','dining__room__image__container');
+                var paragraphs = homepageFeatureCard.getElementsByTagName("p");
+
+                if(paragraphs.length === 2) {
+                    var firstParagraph = paragraphs[0];
+                    firstParagraph.textContent += 'La Salle à Manger';
+                    var secondParagraph = paragraphs[1];
+                    secondParagraph.textContent += `
+                    The dining room offers an elegant, comfortable space for guests to enjoy a meal, with a view of the
+                    open kitchen.
+                    `
+                }
+                break;
+            case 2:
+                homepageCardImageContainer.setAttribute('id', 'terrace__image__container');
+                var paragraphs = homepageFeatureCard.getElementsByTagName("p");
+                
+                if(paragraphs.length === 2) {
+                    var firstParagraph = paragraphs[0];
+                    firstParagraph.textContent += 'La Terrasse';
+                    var secondParagraph = paragraphs[1];
+                    secondParagraph.textContent += `
+                    The terrace provides an outdoor dining experience, offering a view of the Eiffel Tower and the 
+                    surrounding neighbourhood.
+                    `
+                }
+                break;
+            default:
+                null;
+        }
     }
-    
 };
 
 export default homepageContent;
