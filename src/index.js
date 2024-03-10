@@ -1,2 +1,4 @@
-console.log("Test Bundling");
 import './style.css'
+import homepageContent from './homepage/homepage';
+
+homepageContent();
